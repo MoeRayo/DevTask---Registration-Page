@@ -1,0 +1,19 @@
+{
+  "name": "devtask-registration-page",
+  "version": "1.0.0",
+  "description": "This is my first dev task, it is a simple registration page with javascript validation.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoeRayo/DevTask-Registration-Page.git"
+  },
+  "author": "Moronfolu Olufunke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MoeRayo/DevTask-Registration-Page/issues"
+  },
+  "homepage": "https://github.com/MoeRayo/DevTask-Registration-Page#readme"
+}
