@@ -35,7 +35,7 @@ main {
     "arrow form"
     "footer footer";
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 30px;
+  grid-template-rows: auto 50px;
   justify-content: center;
 }
 
@@ -191,4 +191,19 @@ form ~ button:hover {
 .fab {
   display: inline-block;
   margin-right: 0.8rem;
+}
+
+/* footer */
+
+footer {
+  text-align: center;
+  background-color: #f9f0ff;
+  padding: 1rem 0;
+  font-size: 1.3rem;
+  font-family: "Caveat Brush", cursive;
+}
+
+footer a {
+  color: #030201;
+  font-size: 1.2rem;
 }
