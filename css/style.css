@@ -152,6 +152,7 @@ label:nth-of-type(5) {
 
 input:focus-within {
   background-color: #f9f0ff;
+  border-bottom: 4px solid #c09181;
 }
 
 form button {
@@ -223,6 +224,10 @@ footer a {
 }
 
 @media screen and (max-width: 999px) and (min-width: 800px) {
+  h1 {
+    margin: 16rem 0 2.5rem 5rem;
+  }
+
   form {
     width: 85%;
   }
@@ -233,6 +238,10 @@ footer a {
 }
 
 @media screen and (max-width: 799px) and (min-width: 670px) {
+  h1 {
+    margin: 20rem 0 2.5rem 5rem;
+  }
+
   form {
     width: 80%;
     margin: 5rem auto 0;
@@ -260,25 +269,38 @@ footer a {
 @media (max-width: 669px) {
   form {
     width: 65%;
+    margin: 3rem auto 0;
   }
 
-  section:first-of-type {
+  section:first-of-type div {
     display: none;
   }
+
   main {
     grid-template-areas:
+      "arrow"
       "form"
       " footer";
     grid-template-columns: 1fr;
-    grid-template-rows: auto 50px;
+    grid-template-rows: 1fr 2fr 50px;
     justify-content: center;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 0;
+    padding: 1rem;
+  }
+
+  form ~ button {
+    width: 65%;
   }
 }
 
 @media screen and (max-width: 499px) and (min-width: 100px) {
   form {
     width: 80%;
-    margin: 5rem auto 0;
     grid-template-areas:
       "firstname"
       "lastname"
