@@ -8,6 +8,12 @@
       href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Overpass:wght@100;300&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
     <title>Registration Page</title>
   </head>
   <body>
@@ -19,19 +25,32 @@
       </section>
       <section>
         <form action="">
-          <label for=""> First Name <input type="text" /></label>
-          <label for=""> Last Name <input type="text" /></label>
-          <label for=""> Email <input type="email" /></label>
-          <label for="">Password <input type="password" name="" id="" /></label>
-          <label for="">
-            confirm Password <input type="password" name="" id=""
+          <label for="firstname">
+            First Name
+            <input type="text" id="firstname" name="firstname"
           /></label>
+          <label for="lastname">
+            Last Name
+            <input type="text" id="lastname" name="lastname"
+          /></label>
+
+          <label for="passwordOne"
+            >Password
+            <input type="password" name="passwordOne" id="passwordOne"
+          /></label>
+          <label for="passwordTwo">
+            Confirm Password
+            <input type="password" name="passwordTwo" id="passwordTwo"
+          /></label>
+          <label for="email">
+            Email <input type="email" id="email" name="email"
+          /></label>
+          <button type="submit">Register</button>
         </form>
         <button type="button">
-          <a href="">Login With Google</a>
-        </button>
-        <button type="button">
-          <a href="">Login With Facebook</a>
+          <a href="#"
+            ><i class="fab fa-facebook-square fa-2x"></i>Login With Facebook</a
+          >
         </button>
       </section>
       <footer>
