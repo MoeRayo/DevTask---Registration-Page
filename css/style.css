@@ -144,13 +144,16 @@ label:nth-of-type(4) {
 label:nth-of-type(5) {
   grid-area: email;
 }
+
 #firstname,
 #passwordOne {
   width: 95%;
 }
+
 input:focus-within {
   background-color: #f9f0ff;
 }
+
 form button {
   grid-area: button;
   background-color: #d48669;
@@ -206,4 +209,93 @@ footer {
 footer a {
   color: #030201;
   font-size: 1.2rem;
+}
+
+/* responsiveness */
+@media screen and (max-width: 1220) and (min-width: 1000px) {
+  form {
+    width: 75%;
+  }
+
+  form ~ button {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 999px) and (min-width: 800px) {
+  form {
+    width: 85%;
+  }
+
+  form ~ button {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 799px) and (min-width: 670px) {
+  form {
+    width: 80%;
+    margin: 5rem auto 0;
+    grid-template-areas:
+      "firstname"
+      "lastname"
+      "passone"
+      "passtwo"
+      "email"
+      "button";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  #firstname,
+  #passwordOne {
+    width: 100%;
+  }
+
+  form ~ button {
+    width: 80%;
+  }
+}
+
+@media (max-width: 669px) {
+  form {
+    width: 65%;
+  }
+
+  section:first-of-type {
+    display: none;
+  }
+  main {
+    grid-template-areas:
+      "form"
+      " footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 50px;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 499px) and (min-width: 100px) {
+  form {
+    width: 80%;
+    margin: 5rem auto 0;
+    grid-template-areas:
+      "firstname"
+      "lastname"
+      "passone"
+      "passtwo"
+      "email"
+      "button";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  #firstname,
+  #passwordOne {
+    width: 100%;
+  }
+
+  form ~ button {
+    width: 80%;
+  }
 }
