@@ -1,0 +1,85 @@
+/* basic page layout */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  box-sizing: inherit;
+  height: 100%;
+}
+
+/* Grid layout */
+
+main {
+  height: 100%;
+  display: grid;
+  grid-template-areas:
+    "arrow form"
+    "footer footer";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 30px;
+  justify-content: center;
+}
+
+section:first-of-type {
+  /* background-color: red; */
+  grid-area: arrow;
+  padding: 2rem 0;
+  background-color: #030201;
+}
+
+section:last-of-type {
+  background-color: green;
+  grid-area: form;
+}
+
+footer {
+  background-color: khaki;
+  grid-area: footer;
+}
+
+/* the arrow section */
+
+section:first-of-type div {
+  position: relative;
+  width: 65%;
+  padding: 1.5rem;
+  border: 2px solid#d48669;
+  border-left: none;
+
+  margin-left: 3rem;
+  animation: arrow 1s linear infinite;
+
+  /* transition: transform 2s linear infinity; */
+}
+
+@keyframes arrow {
+  50% {
+    transform: translateX(10px);
+  }
+}
+
+section:first-of-type div::after {
+  content: "";
+  position: absolute;
+  height: 10%;
+  border: 60px dashed transparent;
+  border-left-color: #d48669;
+  top: -35px;
+  right: -110px;
+}
+
+h1 {
+  font-family: "Caveat Brush", cursive;
+  font-size: 3rem;
+  color: #c09181;
+  margin: 18rem 0 2.5rem 5rem;
+}
