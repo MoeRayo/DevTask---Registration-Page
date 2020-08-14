@@ -1,3 +1,4 @@
+/* basic page layout */
 *,
 *::after,
 *::before {
@@ -6,13 +7,19 @@
   padding: 0;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   box-sizing: inherit;
+  height: 100%;
 }
 
 /* Grid layout */
 
 main {
+  height: 100%;
   display: grid;
   grid-template-areas:
     "arrow form"
@@ -23,9 +30,10 @@ main {
 }
 
 section:first-of-type {
-  background-color: red;
+  /* background-color: red; */
   grid-area: arrow;
-  vertical-align: middle;
+  padding: 2rem 0;
+  background-color: #030201;
 }
 
 section:last-of-type {
@@ -38,6 +46,31 @@ footer {
   grid-area: footer;
 }
 
+/* the arrow section */
+
+section:first-of-type div {
+  position: relative;
+  width: 65%;
+  padding: 1.5rem;
+  border: 2px solid#d48669;
+  border-left: none;
+  /* margin: 20rem 5rem 0; */
+  margin-left: 3rem;
+}
+
+section:first-of-type div::after {
+  content: "";
+  position: absolute;
+  height: 10%;
+  border: 60px dashed transparent;
+  border-left-color: #d48669;
+  top: -35px;
+  right: -110px;
+}
+
 h1 {
-  /* line-height: auto; */
+  font-family: "Caveat Brush", cursive;
+  font-size: 3rem;
+  color: #c09181;
+  margin: 18rem 0 2.5rem 5rem;
 }
