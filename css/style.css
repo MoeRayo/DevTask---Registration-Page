@@ -54,8 +54,17 @@ section:first-of-type div {
   padding: 1.5rem;
   border: 2px solid#d48669;
   border-left: none;
-  /* margin: 20rem 5rem 0; */
+
   margin-left: 3rem;
+  animation: arrow 1s linear infinite;
+
+  /* transition: transform 2s linear infinity; */
+}
+
+@keyframes arrow {
+  50% {
+    transform: translateX(10px);
+  }
 }
 
 section:first-of-type div::after {
