@@ -1,0 +1,43 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: inherit;
+}
+
+/* Grid layout */
+
+main {
+  display: grid;
+  grid-template-areas:
+    "arrow form"
+    "footer footer";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 30px;
+  justify-content: center;
+}
+
+section:first-of-type {
+  background-color: red;
+  grid-area: arrow;
+  vertical-align: middle;
+}
+
+section:last-of-type {
+  background-color: green;
+  grid-area: form;
+}
+
+footer {
+  background-color: khaki;
+  grid-area: footer;
+}
+
+h1 {
+  /* line-height: auto; */
+}
