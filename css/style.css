@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* basic page layout */
 *,
 *::after,
@@ -16,6 +18,14 @@ body {
   height: 100%;
 }
 
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
 /* Grid layout */
 
 main {
@@ -30,14 +40,13 @@ main {
 }
 
 section:first-of-type {
-  /* background-color: red; */
   grid-area: arrow;
   padding: 2rem 0;
   background-color: #030201;
 }
 
 section:last-of-type {
-  background-color: green;
+  background-color: #d48669;
   grid-area: form;
 }
 
@@ -54,11 +63,8 @@ section:first-of-type div {
   padding: 1.5rem;
   border: 2px solid#d48669;
   border-left: none;
-
   margin-left: 3rem;
   animation: arrow 1s linear infinite;
-
-  /* transition: transform 2s linear infinity; */
 }
 
 @keyframes arrow {
@@ -82,4 +88,107 @@ h1 {
   font-size: 3rem;
   color: #c09181;
   margin: 18rem 0 2.5rem 5rem;
+}
+
+/* form section */
+
+form {
+  width: 60%;
+  background-color: #100d08;
+  padding: 2rem;
+  margin: 10rem auto 0;
+  display: grid;
+  grid-template-areas:
+    "firstname lastname"
+    "passone passtwo"
+    "email email"
+    "button button";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+label {
+  color: #f9f0ff;
+  display: block;
+  font-family: "Overpass", sans-serif;
+  font-weight: 100;
+  font-size: 0.9rem;
+}
+input {
+  display: block;
+  margin: 0.5rem 0 1rem;
+  padding: 0.5rem;
+  width: 100%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: #c09181;
+}
+
+label:nth-of-type(1) {
+  grid-area: firstname;
+}
+
+label:nth-of-type(2) {
+  grid-area: lastname;
+}
+
+label:nth-of-type(3) {
+  grid-area: passone;
+}
+
+label:nth-of-type(4) {
+  grid-area: passtwo;
+}
+
+label:nth-of-type(5) {
+  grid-area: email;
+}
+#firstname,
+#passwordOne {
+  width: 95%;
+}
+input:focus-within {
+  background-color: #f9f0ff;
+}
+form button {
+  grid-area: button;
+  background-color: #d48669;
+  border-radius: 3px;
+  font-family: "Caveat Brush", cursive;
+  border: 1px solid #100d08;
+  padding: 0.7rem 0;
+  font-size: 1.2rem;
+  display: block;
+  margin: 1rem 0 0;
+}
+
+form button:hover {
+  background-color: #f9f0ff;
+}
+
+form ~ button {
+  display: block;
+  font-family: "Overpass", sans-serif;
+  font-size: 1rem;
+  background-color: #3b5998;
+  border: 1px solid #3b5998;
+  color: #f9f0ff;
+  width: 60%;
+  margin: 2rem auto;
+  padding: 0.5rem 0;
+  border-radius: 5px;
+}
+
+form ~ button a {
+  color: #f9f0ff;
+  font-weight: 300;
+}
+form ~ button:hover {
+  background-color: #224ba1;
+}
+
+.fab {
+  display: inline-block;
+  margin-right: 0.8rem;
 }
