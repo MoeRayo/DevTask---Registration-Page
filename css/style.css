@@ -119,12 +119,13 @@ label {
 input {
   display: block;
   margin: 0.5rem 0 1rem;
-  padding: 0.5rem;
+  padding: 0.2rem;
   width: 100%;
   border-top: none;
   border-left: none;
   border-right: none;
   background-color: #c09181;
+  font-size: 1.2rem;
 }
 
 label:nth-of-type(1) {
@@ -203,26 +204,8 @@ form ~ button:hover {
 
 form span {
   display: none;
-}
-/* form label:first-of-type span {
-  display: none;
-}
-
-form label:nth-of-type(2) span {
-  display: none;
-}
-
-form label:nth-of-type span {
-  display: none;
-}
-
-form label:first-of-type span {
-  display: none;
-} */
-/* error messages */
-
-form span {
   color: red;
+  font-weight: bold;
 }
 
 /* footer */
@@ -310,15 +293,15 @@ footer a {
       "form"
       " footer";
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr 50px;
+    grid-template-rows: 100px 2fr 50px;
     justify-content: center;
   }
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     text-align: center;
     margin: 0;
-    padding: 1rem;
+    padding: 0.8rem;
   }
 
   form ~ button {
