@@ -208,6 +208,27 @@ form span {
   font-weight: bold;
 }
 
+/* construction page style */
+
+.construction-link {
+  padding: 2rem 0;
+  background-color: #030201;
+}
+
+.construction-link a {
+  color: #f9f0ff;
+  padding: 0 2rem;
+  font-size: 1.4rem;
+  font-family: "Caveat Brush", cursive;
+}
+
+.image-dev {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+}
+
 /* footer */
 
 footer {
