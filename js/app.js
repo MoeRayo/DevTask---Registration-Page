@@ -5,19 +5,36 @@ let passwordTwo = document.getElementById("passwordTwo");
 let email = document.getElementById("email");
 let registerButton = document.getElementById("registerbutton");
 let mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+let formy = document.querySelector("form");
+// let firstNameError = do
+// let disp = window.getComputedStyle(document.querySelector("form"), ":before");
+
+let disp = document.querySelector("form", "::before");
 
 registerButton.addEventListener("click", function (event) {
   if (firstName.value == Number("")) {
-    console.log("why");
-  }
-  if (lastName.value == Number("")) {
+    // console.log("why");
+    // disp.style.display = "block";
+    let disp = window.getComputedStyle(formy, "::before");
+    // console.log(disp.display);
+    console.log(disp.content);
+    disp.content = " disp.content";
+    // disp.
+
+    // disp = "block";
+    // disp.value = "block";
+    // let appendStyle = function (selector, prop, val) {
+    //   let style = document.createElement("style");
+    //   document.head.appendChild(style);
+
+    //   style.sheet.addRule(selector, prop + ": " + val);
+    // };
   }
   if (
     passwordOne.value == Number("") ||
     passwordTwo.value == Number("") ||
     String(passwordOne.value).length != String(passwordTwo.value).length
   ) {
-    console.log("uhhh");
   }
   if (email.value == Number("") || !email.value.match(mailFormat)) {
     console.log("yea");

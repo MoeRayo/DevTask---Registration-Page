@@ -105,6 +105,7 @@ form {
     "button button";
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+  position: relative;
 }
 
 label {
@@ -114,6 +115,7 @@ label {
   font-weight: 100;
   font-size: 0.9rem;
 }
+
 input {
   display: block;
   margin: 0.5rem 0 1rem;
@@ -138,15 +140,6 @@ label:nth-of-type(3) {
   position: relative;
 }
 
-label:nth-of-type(3)::before {
-  content: "*Incorrect";
-  position: absolute;
-  left: 60px;
-  color: #ff0000;
-  font-weight: bold;
-  font-size: 0.8rem;
-}
-
 label:nth-of-type(4) {
   grid-area: passtwo;
 }
@@ -154,14 +147,6 @@ label:nth-of-type(4) {
 label:nth-of-type(5) {
   position: relative;
   grid-area: email;
-}
-label:nth-of-type(5)::before {
-  content: "*Please put the right email";
-  position: absolute;
-  left: 80px;
-  color: #ff0000;
-  font-weight: bold;
-  font-size: 0.8rem;
 }
 
 #firstname,
@@ -214,6 +199,30 @@ form ~ button:hover {
 .fab {
   display: inline-block;
   margin-right: 0.8rem;
+}
+
+form span {
+  display: none;
+}
+/* form label:first-of-type span {
+  display: none;
+}
+
+form label:nth-of-type(2) span {
+  display: none;
+}
+
+form label:nth-of-type span {
+  display: none;
+}
+
+form label:first-of-type span {
+  display: none;
+} */
+/* error messages */
+
+form span {
+  color: red;
 }
 
 /* footer */

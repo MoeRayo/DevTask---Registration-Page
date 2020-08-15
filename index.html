@@ -26,16 +26,16 @@
       <section>
         <form action="">
           <label for="firstname">
-            First Name
+            First Name <span> *Fill</span>
             <input type="text" id="firstname" name="firstname"
           /></label>
           <label for="lastname">
-            Last Name
+            Last Name <span> *Fill</span>
             <input type="text" id="lastname" name="lastname"
           /></label>
 
           <label for="passwordOne"
-            >Password
+            >Password <span>*Error </span>
             <input type="password" name="passwordOne" id="passwordOne"
           /></label>
           <label for="passwordTwo">
@@ -43,7 +43,8 @@
             <input type="password" name="passwordTwo" id="passwordTwo"
           /></label>
           <label for="email">
-            Email <input type="email" id="email" name="email"
+            Email <span> *Invalid email</span>
+            <input type="email" id="email" name="email"
           /></label>
           <button type="submit" id="registerbutton">Register</button>
         </form>
