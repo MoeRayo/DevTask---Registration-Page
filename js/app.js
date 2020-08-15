@@ -7,12 +7,19 @@ let registerButton = document.getElementById("registerbutton");
 let mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 registerButton.addEventListener("click", function (event) {
-  //   if (email.value.match(mailFormat)) {
-  //     console.log("yea");
-  //   }
-  if (email.value === "" || !email.value.match(mailFormat)) {
-    console.log("no");
-  } else {
+  if (firstName.value == Number("")) {
+    console.log("why");
+  }
+  if (lastName.value == Number("")) {
+  }
+  if (
+    passwordOne.value == Number("") ||
+    passwordTwo.value == Number("") ||
+    String(passwordOne.value).length != String(passwordTwo.value).length
+  ) {
+    console.log("uhhh");
+  }
+  if (email.value == Number("") || !email.value.match(mailFormat)) {
     console.log("yea");
   }
   event.preventDefault();
