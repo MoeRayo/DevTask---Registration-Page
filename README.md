@@ -5,5 +5,7 @@
 ## Welcome! 👋
 
 Thanks for checking out my registration page for the Dev Task.
+
 This page was built with HTML, CSS and JavaScript.
-The form uses JavaScriot for validation and it is 100% responsive.
+
+The form uses JavaScript for validation and it is 100% responsive.
